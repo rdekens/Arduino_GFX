@@ -561,6 +561,14 @@ void Arduino_Canvas::flush()
   }
 }
 
+
+void Arduino_Canvas::flushWithTrans( uint16_t transparent_color = -1)
+{
+  if (_output)
+  {
+	  _output->draw16bitRGBBitmapWithTranColor(_output_x, _output_y, _framebuffer, transparent_color, WIDTH, HEIGHT);  
+  }
+}
 void Arduino_Canvas::flushQuad(void)
 {
   int16_t y = _output_y;

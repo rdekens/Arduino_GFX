@@ -805,6 +805,8 @@ static const uint8_t st7701_type6_init_operations[] = {
 
     WRITE_C8_D8, 0xCC, 0x10,
 
+    WRITE_C8_D8, 0xCD, 0x08,  // rwd
+
     WRITE_COMMAND_8, 0xB0,
     WRITE_BYTES, 16,
     0x05, 0x12, 0x98, 0x0E,
@@ -906,7 +908,8 @@ static const uint8_t st7701_type6_init_operations[] = {
     BEGIN_WRITE,
     WRITE_C8_D8, 0x3A, 0x66,
 
-    WRITE_C8_D8, 0x36, 0x00,
+    // WRITE_C8_D8, 0x36, 0x00,
+	WRITE_C8_D8, 0x36, 0x08,
 
     WRITE_C8_D8, 0x35, 0x00,
 
